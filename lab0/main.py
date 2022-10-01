@@ -36,7 +36,7 @@ def load_mnist(root='./mnist'):
     X_test = np.fromfile(root + '/t10k-images.idx3-ubyte',dtype=np.uint8, offset=16)
     y_test = np.fromfile(root + '/t10k-labels.idx1-ubyte', dtype=np.uint8, offset=8)
     X_train = X_train.reshape(60000,28,28)
-    X_train = X_train[4000:8000,:]
+    X_train = X_train[0:4000,:]
     X_test = X_test.reshape(10000,28,28)
     return X_train,y_train,X_test,y_test
 
